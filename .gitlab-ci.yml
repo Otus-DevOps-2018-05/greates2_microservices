@@ -1,3 +1,5 @@
+image: ruby:2.4.2 
+
 stages:
   - build
   - test
@@ -7,7 +9,6 @@ variables:
   DATABASE_URL: 'mongodb://mongo/user_posts'
 
 before_script:
-  - gem install bundler
   - cd reddit
   - bundle install 
 
