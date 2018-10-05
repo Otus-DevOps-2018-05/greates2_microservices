@@ -1,3 +1,9 @@
+# ДЗ 15 
+
+- Поработали с сетью в docker
+- Разобрались с docker-compose
+- Чтобы передать параметр для имени проекта, мы можем использовать команду docker-compose c ключом  -p, --project-name NAME     Specify an alternate project name (default: directory name) или использовать переменную окружения COMPOSE_PROJECT_NAME environment variable relates to the -p flag.
+
 # ДЗ 14
 
 - Разбил приложение на три микросервиса
