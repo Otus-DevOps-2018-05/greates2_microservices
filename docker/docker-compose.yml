@@ -19,11 +19,14 @@ services:
       - front_net
 
   post:
-    env_file: .env
-    image: ${USER_NAME}/post:${POST_IMAGE_VERSION}
-    networks:
-      - back_net
-      - front_net
+    image: ${USER_NAME}/post
+    environment:
+      - POST_DATABASE_HOST=post_db
+      - POST_DATABASE=posts
+    depends_on:
+      - post_db
+    ports:
+      - "5000:5000"
     logging:
       driver: "fluentd"
       options:
